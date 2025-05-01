@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}خانه{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+    <div class="relative bg-white p-12 rounded-2xl shadow-2xl max-w-lg w-full text-center transform transition-all hover:scale-105 border-2 border-transparent bg-gradient-to-r from-blue-100 to-gray-100">
+        <h1 class="text-5xl font-extrabold text-gray-800 mb-2">پنل هوش مصنوعی پرتو بتن</h1>
+        <p class="text-gray-500 text-md mb-6">کیفیت و نوآوری در صنعت بتن</p>
+        <p class="text-gray-600 text-lg mb-10">ابزاری هوشمند برای بهینه‌سازی تولید بتن، تحلیل پیشرفته داده‌ها و بهبود خدمات مشتریان با فناوری هوش مصنوعی.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="/dashboard" class="inline-block bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-800 transition duration-300 transform hover:scale-105">ورود به داشبورد</a>
+            <a href="/about" class="inline-block bg-amber-500 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-amber-600 transition duration-300 transform hover:scale-105">بیشتر بدانید</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

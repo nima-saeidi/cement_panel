@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}ثبت‌نام{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-200 px-4">
+    <div class="relative bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md text-center transform transition-all hover:scale-105 border-2 border-transparent bg-gradient-to-r from-blue-100 to-gray-100">
+        <h2 class="text-4xl font-extrabold text-gray-800 mb-2">ثبت‌نام در پنل پرتو بتن</h2>
+        <p class="text-gray-500 text-md mb-6">عضویت برای دسترسی به ابزارهای هوشمند بتن</p>
+        <form method="POST" class="space-y-6">
+            <div class="relative">
+                <label for="username" class="block text-sm font-medium text-gray-700 mb-1 text-right">نام کاربری</label>
+                <div class="flex items-center">
+                    <span class="absolute left-3 text-gray-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </span>
+                    <input type="text" id="username" name="username" placeholder="نام کاربری"
+                        class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 focus:outline-none transition duration-200"
+                        required aria-describedby="username-label">
+                </div>
+            </div>
+            <div class="relative">
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1 text-right">رمز بسته‌نام در پنل پرتو بتنز عبور</label>
+                <div class="flex items-center">
+                    <span class="absolute left-3 text-gray-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1m6-3v6m-3-3h3"></path>
+                        </svg>
+                    </span>
+                    <input type="password" id="password" name="password" placeholder="رمز عبور"
+                        class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 focus:outline-none transition duration-200"
+                        required aria-describedby="password-label">
+                </div>
+            </div>
+            <div>
+                <button type="submit"
+                    class="w-full bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-800 transition duration-300 transform hover:scale-105">
+                    ثبت‌نام
+                </button>
+            </div>
+        </form>
+        <p class="mt-6 text-center text-sm text-gray-600">
+            قبلاً حساب کاربری دارید؟
+            <a href="{{ url_for('login') }}" class="text-amber-500 hover:underline font-medium">وارد شوید</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
